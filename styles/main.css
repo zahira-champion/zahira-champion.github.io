@@ -37,25 +37,18 @@ h1 {
     font-family: 'Cormorant', serif;
     text-align:center;
     font-size: x-large;
-    background-color: #E6E6FA;
   }
 
   h2 {
     font-family: 'Cormorant', serif;
     text-align: ;
     font-size: 1em;
-    background-color: #E6E6FA;
-  }
-
-  .intro-photo {
-    background-color: #E6E6FA;
   }
   
   h3 {
     font-family: 'Parisienne', cursive;
     text-align: end;
     font-size: 1em;
-    background-color: #E6E6FA;
   }
   p { 
     font-family: 'Cormorant', serif;
@@ -67,7 +60,7 @@ h1 {
     left: 0;
     max-width: 800px;
     padding: 15px;
-    background-color: #E6E6FA; 
+    background-color: rgba(230, 230, 250, 0.5);
     height: 100%;
   }
 
