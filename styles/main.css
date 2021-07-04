@@ -2,10 +2,18 @@ html, body {
     height: 100%;
 }
 
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
 body {
     background-image: url('../IMG_2430.PNG');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     padding:0;
     margin:0;
 }
@@ -18,12 +26,12 @@ body {
     padding: 15px 0px;
 }
 
-.heading a {
+.heading a, .css-positions-link {
     text-decoration: none;
     color: black;
 }
 
-.heading a:hover, .active-link {
+.heading a:hover, .active-link, .css-positions-link:hover {
     text-shadow: 0px 0px 5px black;
 }
 
@@ -59,15 +67,15 @@ h1 {
     right: 0;
     left: 0;
     max-width: 800px;
-    padding: 15px;
+    padding: 70px;
     background-color: rgba(230, 230, 250, 0.5);
-    height: 100%;
-  }
+    min-height: calc(100% - 58px - 78px);
+}
 
   footer {
-      position: absolute;
-      bottom: 0px;
-      width: 100%;
+      /* position: absolute;
+      bottom: 0px; */
+      /* width: 100%; */
       text-align: center;
       padding: 15px 0;
       font-style: italic;
@@ -81,6 +89,7 @@ h1 {
   }
 
   /* ABOUT ME PAGE STYLES */
+
   .about-me-table {
       width: 100%;
   }
@@ -94,3 +103,69 @@ h1 {
     text-align: right;
     font-weight: bold;
 }
+
+/* BLOG PAGE STYLES */
+
+.css-photo {
+  height: auto;
+  width: 300px;
+  float: left;
+  margin-right: 15px;
+  padding-top: 30px;
+}
+
+/* RESEARCH QUESTION": What are the differences between 
+srelative, absolute, and fixed positioning? */
+
+.container {
+    height: 100px;
+    width: 300px;
+    border: 0px;
+    background-color: white;
+}
+
+.square1 {
+    position: static;
+    height: 50px;
+    width: 50px;
+    border: 0px;
+    background-color: black;
+  }
+
+  .square2 {
+    position: relative;
+    left: 30px;
+    top: 30px;
+    height: 50px;
+    width: 50px;
+    border: 0px;
+    background-color: black;
+  }
+
+  .container3 {
+    position: relative;
+    height: 100px;
+    width: 300px;
+    border: 0px;
+    background-color: white;
+}
+
+  .square3 {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    height: 50px;
+    width: 50px;
+    border: 0px;
+    background-color: black;
+  }
+
+  .red-square {
+    position: absolute;
+    right: 5px;
+    top: 30px;
+    height: 50px;
+    width: 50px;
+    border: 0px;
+    background-color: red;
+  }

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Zahira's Blog</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&family=Parisienne&family=Satisfy&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+        <div class="heading">
+            <span id="page-title">Z's Blog</span> 
+            <a href="index.html">Home</a>
+            <a href="about-me.html">About Me</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+    
+    </div>
+  </header>
+  <div class="main-content">
+    <div><h1>What are the Differences Between Relative, Absolute and Fixed Positioning?</h1><br>
+        <p>First off lets talk about <strong>positioning</strong> in HTML. Lets imagine you have inserted a square on your webpage, 
+            it will automatically be placed on the page as <mark>position: static;</mark> in another words flow with the page. 
+            We can see this in the example below. This is the default for the HTML property <strong>position</strong>. 
+            The position property is made up of top, right, bottom and left.</p>
+            <table class="about-me-table">
+                <tr>
+                    <td>
+                        <div class="container">
+                            <div class="square1"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <pre>
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;square1&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+                        </pre>
+                    </td>
+                    <td>
+                        <pre>
+.container {
+    height: 100px;
+    width: 300px;
+    border: 0px;
+    background-color: white;
+}  
+
+.square1 {
+    position: static;
+    height: 50px;
+    width: 50px;
+    border: 0px;
+    background-color: black;
+}
+                        </pre>
+                    </td>
+                </tr>
+            </table>
+            
+        <div><h2>Relative</h2>
+            <p>Now if we wanted to move the element using top, left, botom or right we would use <mark>position: relative;</mark>. 
+            Here i've used <mark>left: 30px;</mark> and <mark>top: 30px;</mark>. It has moved it 30 pixels down from the top and 
+            pushed it 30 pixels to the right from the left. This is not using the positions of the nearest parent though.</p>
+            <table class="about-me-table">
+                <tr>
+                    <td>
+                        <div class="container">
+                            <div class="square2"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <pre>
+&lt;div class=&quot;container&quot;&gt;
+&lt;div class=&quot;square2&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+                        </pre>
+                    </td>
+                    <td>
+                        <pre>
+.container {
+    height: 100px;
+    width: 300px;
+    border: 0px;
+    background-color: white;
+}  
+
+.square2 {
+    position: relative;
+    left: 30px;
+    top: 30px;
+    height: 50px;
+    width: 50px;
+    border: 0px;
+    background-color: black;
+  }
+                        </pre>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div><h2>Absolute</h2>
+            <p>The use <mark>position: absolute;</mark> lets you place the element anywhere on the page. You have
+                to be careful with overusing it, as it limits the flexibility of the page as the elements using this now have no flow 
+                on the page. The same positioning attributes top, left, bottom and right are used. Absolute positions it to 
+                the nearest positioned parent NOT using static. For example the black box has <mark>position: absolute;</mark> <mark>left: 1px;</mark>
+            <mark>top: 1px;</mark>. The red square has <mark>position: absolute;</mark> <mark>right: 5px;</mark> <mark>top: 30px;</mark>. </p>
+            <table class="about-me-table">
+                <tr>
+                    <td>
+                        <div class="container3">
+                            <div class="square3"></div>
+                            <div class="red-square"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <pre>
+&lt;div class=&quot;container3&quot;&gt;
+&lt;div class=&quot;square3&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;red-square&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+                        </pre>
+                    </td>
+                    <td>
+                        <pre>
+.container3 {
+position: relative;
+height: 100px;
+width: 300px;
+border: 0px;
+background-color: white;
+}
+                            
+.square3 {
+position: absolute;
+left: 1px;
+top: 1px;
+height: 50px;
+width: 50px;
+border: 0px;
+background-color: black;
+}
+                            
+.red-square {
+position: absolute;
+right: 5px;
+top: 30px;
+height: 50px;
+width: 50px;
+border: 0px;
+background-color: red;
+}
+                        </pre>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </div>    
+    <div>
+        <h2>Fixed Positioning</h2>
+            <p>Now onto the last one and I say easiest one to understand. <mark>position: fixed;</mark> is used to keep something fixed to the screen say for example a navagation bar. 
+                You don't want to have to scroll all the way back to the top once you have finished reading a long page. You can see an example of this on this page now. As you scroll 
+                down the page it always stays at the top of the window and doesn't disappear.</p>
+                <br>
+    </div>
+    <div>
+        <p>I hope that helped you understand these concepts more! <br>
+        See you soon! </p>
+    </div>
+    <h3>- Sunday 4th July 2021</h3></div> 
+  </div>
+    <footer>
+      <div>Zahira Jasmine Champion ©2021</div>
+
+    </footer>
+  </body>
+</html>
