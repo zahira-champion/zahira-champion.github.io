@@ -169,3 +169,10 @@ srelative, absolute, and fixed positioning? */
     border: 0px;
     background-color: red;
   }
+
+
+/* Problem solving blog */
+
+.text-align:center {
+  text-align: center;
+}
