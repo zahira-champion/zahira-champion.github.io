@@ -1,5 +1,5 @@
 html, body {
-    height: 100%;
+    min-height: 100%;
 }
 
 header {
@@ -175,4 +175,92 @@ srelative, absolute, and fixed positioning? */
 
 .text-align:center {
   text-align: center;
+}
+
+
+/* Responsive HTML and CSS */
+
+@media only screen
+and (min-width: 1199px) {
+  .html,body {
+    min-height: 100vh;
+  }
+  footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background: white;
+  }
+  .intro-photo {
+    float: left;
+    margin-right: 0;
+    width: 27%;
+    padding: 0px 50px 0px 0px;
+  }
+}
+
+@media only screen
+and (max-width: 768px)
+and (orientation: portrait) {
+  .html,body {
+    min-height: 100vh;
+  }
+  footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background: white;
+  }
+  .intro-photo {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
+  .blogs .css-photo {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+  }
+  .blogs br {
+    display: none;
+  }
+}
+
+@media only screen
+and (max-width: 320px)
+and (orientation: portrait) {
+  .html,body {
+    min-height: 100vh;
+  }
+  footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background: white;
+  }
+  .main-content {
+    padding: 70px 15px 45px 15px;
+  }
+  .main-content > h2 {
+    text-align: center;
+  }
+  #page-title {
+    display: none;
+  }
+  .intro-photo {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
+  .blogs .css-photo {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+  }
+  .blogs br {
+    display: none;
+  }
 }
